@@ -14,7 +14,7 @@ class App extends Component {
         <p className="clocks">
           <Clock 
             title="The Riots Spread" 
-            size="6">
+            size={6}>
           </Clock>
         </p>
       </div>

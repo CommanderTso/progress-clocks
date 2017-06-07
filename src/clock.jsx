@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import PropTypes from 'prop-types'
 import './css/clock.css'
 import sixClock from './images/six-clock-empty.svg'
 
@@ -11,5 +12,10 @@ class Clock extends Component {
     )
   }
 }
+
+Clock.propTypes = 
+  { title: PropTypes.string
+  , size: PropTypes.number
+  }
 
 export default Clock
