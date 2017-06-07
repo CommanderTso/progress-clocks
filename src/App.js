@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './css/App.css'
+import './css/app.css'
 import logo from './images/old-clock.svg'
 import Clock from './clock.js'
 
@@ -12,7 +12,10 @@ class App extends Component {
           <span className="header-text">Progress Clocks</span>
         </div>
         <p className="clocks">
-          
+          <Clock 
+            title="The Riots Spread" 
+            size="6">
+          </Clock>
         </p>
       </div>
     );
