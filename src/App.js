@@ -1,16 +1,17 @@
 import React, { Component } from 'react'
 import './css/App.css'
 import logo from './images/old-clock.svg'
+import Clock from './clock.js'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+      <div className="app">
+        <div className="app-header">
+          <img src={logo} className="app-logo" alt="logo" />
           <span className="header-text">Progress Clocks</span>
         </div>
-        <p className="App-intro">
+        <p className="clocks">
           
         </p>
       </div>
