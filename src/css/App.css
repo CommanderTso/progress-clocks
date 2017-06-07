@@ -2,16 +2,24 @@
   text-align: center;
 }
 
-/*.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}*/
+.App-logo {
+  /*animation: App-logo-spin infinite 20s linear;*/
+  height: 75px;
+}
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 75px;
   padding: 20px;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: -webkit-xxx-large;
+}
+
+.App-header .header-text {
+  padding-left: 20px;
 }
 
 .App-intro {
