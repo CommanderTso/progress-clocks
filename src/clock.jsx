@@ -5,7 +5,7 @@ class Clock extends Component {
   render() {
     return (
       <div className="clock">
-        <img></img>
+        
       </div>
     )
   }
