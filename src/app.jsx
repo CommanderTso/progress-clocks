@@ -11,12 +11,13 @@ class App extends Component {
           <img src={logo} className="app-logo" alt="logo" />
           <span className="header-text">Progress Clocks</span>
         </div>
-        <p className="clocks">
+        <div className="clocks">
           <Clock 
             title="The Riots Spread" 
-            size={6}>
+            totalSteps={6}
+            currentStep={0}>
           </Clock>
-        </p>
+        </div>
       </div>
     );
   }
