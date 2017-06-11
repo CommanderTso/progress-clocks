@@ -14,6 +14,7 @@ class Clock extends Component {
     this.state = 
       { currentStep: props.currentStep || 0 
       , totalSteps: props.totalSteps || 4
+      , title: props.title || 'A New Clock...'
       }
     
     this.onClick = this.onClick.bind(this)
@@ -22,6 +23,7 @@ class Clock extends Component {
   render() {
     return (
       <div className="clock">
+        <h3>{this.state.title}</h3>
         <img 
           alt='clock' 
           src={sixLookup[this.state.currentStep]}
