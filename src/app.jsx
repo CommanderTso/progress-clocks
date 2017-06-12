@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './css/app.css'
-import logo from './images/old-clock.svg'
+import logo from './images/logo-clock.svg'
 
 import Clock from './clock.jsx'
 import Button from './button.jsx'
