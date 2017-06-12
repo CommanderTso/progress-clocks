@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <title>background</title>
+    <rect fill="#ffffff" id="canvas_background" height="402" width="402" y="-1" x="-1"/>
+    <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+      <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+    </g>
+  </g>
+  <g>
+    <title>Layer 1</title>
+    <path d="M 399 200 A 199 199 0 0 1 200 399 A 199 199 0 0 1 1 200 A 199 199 0 0 1 200 1 A 199 199 0 0 1 399 200 Z" id="svg_5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+    <line stroke-linecap="null" id="svg_6" y2="400" x2="200" y1="1.999998" x1="201.99" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke-linejoin="null" stroke="#000" fill="none"/>
+    <line stroke-linecap="null" id="svg_7" y2="200" x2="400" y1="200" x1="0" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke-linejoin="null" stroke="#000" fill="none"/>
+    <line stroke-linecap="null" id="svg_8" y2="342" x2="59.5" y1="59.003526" x1="341.500008" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke-linejoin="null" stroke="#000" fill="none"/>
+    <path d="M 202.653 0.931 C 202.653 0.931 243.843 0.415 277.786 15.28 C 313.76 31.034 342.124 60.772 342.124 60.772 C 342.124 60.772 201.689 198.794 201.689 198.794" style="stroke: black; stroke-width: 1px; fill: rgb(142, 85, 85);"/>
+  </g>
+  <path d="M 200.867 199.565 L 342.537 60.97 C 350.641 68.367 369.61 89.693 382.613 119.819 C 393.802 145.744 399.885 179.624 398.826 200.038" style="stroke: black; stroke-width: 1px; fill: rgb(142, 85, 85);"/>
+  <path d="M 242.731 47.743 L 439.38 47.856 C 438.516 58.589 440.306 58.948 435.906 82.25 C 430.265 112.124 419.711 146.886 382.108 186.398 C 362.852 206.631 310.608 245.7 241.96 244.929" style="stroke: black; stroke-width: 1px; fill: rgb(142, 85, 85);" transform="matrix(1, 0, 0, 1, -41.14420786156288, 153.47717156713074)"/>
+  <path d="M 83.082 195.643 C 83.082 195.643 123.767 195.631 157.71 210.496 C 193.684 226.25 222.553 251.953 222.553 251.953 C 222.553 251.953 82.118 393.001 82.118 393.001" style="stroke: black; stroke-width: 1px; fill: rgb(142, 85, 85);" transform="matrix(-1, 0, 0, -1, 282.477, 594.190766)"/>
+  <path d="M 1.849 338.919 L 141.501 198.306 C 149.605 205.703 170.592 229.047 183.595 259.173 C 194.784 285.098 200.867 318.978 199.808 339.392" style="stroke: black; stroke-width: 1px; fill: rgb(142, 85, 85);" transform="matrix(-1, 0, 0, -1, 201.775598, 539.715996)"/>
+  <path d="M 4.206 197.372 L 201.864 198.772 C 201 188.039 202.79 187.68 198.39 164.378 C 192.749 134.504 182.195 97.724 144.592 58.212 C 125.336 37.979 72.588 -1.594 3.94 -0.823" style="stroke: black; stroke-width: 1px; fill: rgb(142, 85, 85);" transform="matrix(0, -1, 1, 0, 2.867634, 203.440372)"/>
+</svg>

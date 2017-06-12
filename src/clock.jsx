@@ -2,10 +2,16 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './css/clock.css'
 
-import sixClockEmpty from './images/six-clock-0.svg'
-import sixClockOne from './images/six-clock-1.svg'
-import sixClockTwo from './images/six-clock-2.svg'
-import sixClockThree from './images/six-clock-3.svg'
+import fourClockZero from './images/4-clocks/4-clock-0.svg'
+
+import sixClockZero from './images/6-clocks/6-clock-0.svg'
+import sixClockOne from './images/6-clocks/6-clock-1.svg'
+import sixClockTwo from './images/6-clocks/6-clock-2.svg'
+import sixClockThree from './images/6-clocks/6-clock-3.svg'
+import sixClockFour from './images/6-clocks/6-clock-4.svg'
+import sixClockFive from './images/6-clocks/6-clock-5.svg'
+import sixClockSix from './images/6-clocks/6-clock-6.svg'
+
 
 class Clock extends Component {
   constructor(props) {
@@ -15,9 +21,11 @@ class Clock extends Component {
       { currentStep: props.currentStep || 0 
       , totalSteps: props.totalSteps || 4
       , title: props.title || 'A New Clock'
+      , clockLookup: this.setClockLookup(props.totalSteps) || fourLookup
       }
     
     this.onClick = this.onClick.bind(this)
+    this.setClockLookup = this.setClockLookup.bind(this)
     
   }
   
@@ -40,16 +48,41 @@ class Clock extends Component {
       : 0
     this.setState({currentStep: newCurrentStep})
   }
+  
+  setClockLookup(totalSteps) {
+    let lookups = 
+      [ fourLookup
+      , sixLookup
+      // , eightLookup
+      ]
+    
+    if (isNaN(totalSteps) === true)
+      totalSteps = parseInt(totalSteps, 10)
+    
+    return lookups[totalSteps]
+  }
 }
 
 var sixLookup = 
-  [ sixClockEmpty
+  [ sixClockZero
   , sixClockOne
   , sixClockTwo
   , sixClockThree
-  , sixClockEmpty
-  , sixClockEmpty
-  , sixClockEmpty
+  , sixClockFour
+  , sixClockFive
+  , sixClockSix
+  ]
+  
+var fourLookup = 
+  [ fourClockZero
+  , fourClockZero
+  , fourClockZero
+  , fourClockZero
+  , fourClockZero
+  // , fourClockOne
+  // , fourClockTwo
+  // , fourClockThree
+  // , fourClockFour
   ]
 
 Clock.propTypes = 

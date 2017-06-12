@@ -45,7 +45,7 @@ class App extends Component {
     
     newClocks.push(
       { title: 'A New Clock'
-      , totalSteps: 4
+      , totalSteps: 6
       , currentStep: 0
       }
     )
