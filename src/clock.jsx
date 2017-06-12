@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import './css/clock.css'
 
-import sixClockEmpty from './images/six-clock-empty.svg'
+import sixClockEmpty from './images/six-clock-0.svg'
 import sixClockOne from './images/six-clock-1.svg'
 import sixClockTwo from './images/six-clock-2.svg'
 import sixClockThree from './images/six-clock-3.svg'
@@ -14,10 +14,11 @@ class Clock extends Component {
     this.state = 
       { currentStep: props.currentStep || 0 
       , totalSteps: props.totalSteps || 4
-      , title: props.title || 'A New Clock...'
+      , title: props.title || 'A New Clock'
       }
     
     this.onClick = this.onClick.bind(this)
+    
   }
   
   render() {
