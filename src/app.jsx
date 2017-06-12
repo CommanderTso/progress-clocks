@@ -27,23 +27,29 @@ class App extends Component {
             onClick={this.onNewClockClick}/>
         </div>
         <div className="clocks">
-          <Clock 
-            title="The Riots Spread" 
-            totalSteps={6}
-            currentStep={0}/>
+          { this.state.clocks.map((clock, index) => 
+              <Clock
+                key={'clock_' + index}
+                title={clock.title}
+                totalSteps={clock.totalSteps}
+                currentStep={clock.currentStep}/>
+            )
+          }
         </div>
-        { this.state.clocks.map(clock => 
-            <Clock
-              title={clock.title}
-              totalSteps={clock.totalSteps}
-              currentSteps={clock.currentSteps}/>
-          )
-        }
       </div>
-    );
+    )
   }
   
   onNewClockClick() {
+    let newClocks = this.state.clocks
+    
+    newClocks.push(
+      { title: 'A New Clock'
+      , totalSteps: 4
+      , currentStep: 0
+      }
+    )
+    this.setState({clocks: newClocks})
   }
 }
 
