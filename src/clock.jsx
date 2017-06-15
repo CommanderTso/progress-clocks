@@ -3,6 +3,10 @@ import PropTypes from 'prop-types'
 import './css/clock.css'
 
 import fourClockZero from './images/4-clocks/4-clock-0.svg'
+import fourClockOne from './images/4-clocks/4-clock-1.svg'
+import fourClockTwo from './images/4-clocks/4-clock-2.svg'
+import fourClockThree from './images/4-clocks/4-clock-3.svg'
+import fourClockFour from './images/4-clocks/4-clock-4.svg'
 
 import sixClockZero from './images/6-clocks/6-clock-0.svg'
 import sixClockOne from './images/6-clocks/6-clock-1.svg'
@@ -11,6 +15,16 @@ import sixClockThree from './images/6-clocks/6-clock-3.svg'
 import sixClockFour from './images/6-clocks/6-clock-4.svg'
 import sixClockFive from './images/6-clocks/6-clock-5.svg'
 import sixClockSix from './images/6-clocks/6-clock-6.svg'
+
+import eightClockZero from './images/8-clocks/8-clock-0.svg'
+import eightClockOne from './images/8-clocks/8-clock-1.svg'
+import eightClockTwo from './images/8-clocks/8-clock-2.svg'
+import eightClockThree from './images/8-clocks/8-clock-3.svg'
+import eightClockFour from './images/8-clocks/8-clock-4.svg'
+import eightClockFive from './images/8-clocks/8-clock-5.svg'
+import eightClockSix from './images/8-clocks/8-clock-6.svg'
+import eightClockSeven from './images/8-clocks/8-clock-7.svg'
+import eightClockEight from './images/8-clocks/8-clock-8.svg'
 
 
 class Clock extends Component {
@@ -30,12 +44,15 @@ class Clock extends Component {
   }
   
   render() {
+    let clockLookup = this.state.clockLookup
+    let currentStep = this.state.currentStep
+    
     return (
       <div className="clock">
         <h3>{this.state.title}</h3>
         <img 
           alt='clock' 
-          src={sixLookup[this.state.currentStep]}
+          src={clockLookup[currentStep]}
           onClick={this.onClick}>
         </img>
       </div>
@@ -51,10 +68,10 @@ class Clock extends Component {
   
   setClockLookup(totalSteps) {
     let lookups = 
-      [ fourLookup
-      , sixLookup
-      // , eightLookup
-      ]
+      { "4": fourLookup
+      , "6": sixLookup
+      , "8": eightLookup
+      }
     
     if (isNaN(totalSteps) === true)
       totalSteps = parseInt(totalSteps, 10)
@@ -62,7 +79,15 @@ class Clock extends Component {
     return lookups[totalSteps]
   }
 }
-
+  
+var fourLookup = 
+  [ fourClockZero
+  , fourClockOne
+  , fourClockTwo
+  , fourClockThree
+  , fourClockFour
+  ]
+  
 var sixLookup = 
   [ sixClockZero
   , sixClockOne
@@ -72,17 +97,17 @@ var sixLookup =
   , sixClockFive
   , sixClockSix
   ]
-  
-var fourLookup = 
-  [ fourClockZero
-  , fourClockZero
-  , fourClockZero
-  , fourClockZero
-  , fourClockZero
-  // , fourClockOne
-  // , fourClockTwo
-  // , fourClockThree
-  // , fourClockFour
+
+var eightLookup = 
+  [ eightClockZero
+  , eightClockOne
+  , eightClockTwo
+  , eightClockThree
+  , eightClockFour
+  , eightClockFive
+  , eightClockSix
+  , eightClockSeven
+  , eightClockEight
   ]
 
 Clock.propTypes = 
