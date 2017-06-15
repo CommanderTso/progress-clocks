@@ -4,14 +4,16 @@ import logo from './images/logo-clock.svg'
 
 import Clock from './clock.jsx'
 import Button from './button.jsx'
+import NewDialog from './new-dialog.jsx'
 
 class App extends Component {
   constructor(props) {
     super(props)
     
-    this.state = {clocks: []}
-    
-    this.onNewClockClick = this.onNewClockClick.bind(this)
+    this.state = 
+      { clocks: []
+      , showNewDialog: false
+      }
   }
   
   render() {
@@ -22,9 +24,12 @@ class App extends Component {
           <span className="header-text">Progress Clocks</span>
         </div>
         <div>
+          <NewDialog
+            isOpen={this.state.showNewDialog}
+            onClickCancel={this.toggleNewModal}/>
           <Button
             label={'New Clock'}
-            onClick={this.onNewClockClick}/>
+            onClick={this.toggleNewModal}/>
         </div>
         <div className="clocks">
           { this.state.clocks.map((clock, index) => 
@@ -40,16 +45,23 @@ class App extends Component {
     )
   }
   
-  onNewClockClick() {
-    let newClocks = this.state.clocks
-    
-    newClocks.push(
-      { title: 'A New Clock'
-      , totalSteps: 6
-      , currentStep: 0
-      }
+  toggleNewModal = () => {
+    this.setState(
+      { showNewDialog: !this.state.showNewDialog }
     )
-    this.setState({clocks: newClocks})
+  }
+  
+  onNewClockClick = () => {
+    this.setState({ showNewDialog: true })
+    // let newClocks = this.state.clocks
+    // 
+    // newClocks.push(
+    //   { title: 'A New Clock'
+    //   , totalSteps: 6
+    //   , currentStep: 0
+    //   }
+    // )
+    // this.setState({clocks: newClocks})
   }
 }
 
