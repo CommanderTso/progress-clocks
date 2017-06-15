@@ -13,4 +13,5 @@
     <line stroke-linecap="null" id="svg_6" y2="400" x2="200" y1="1.999998" x1="201.99" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke-linejoin="null" stroke="#000" fill="none"/>
     <line stroke-linecap="null" id="svg_7" y2="200" x2="400" y1="200" x1="0" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke-linejoin="null" stroke="#000" fill="none"/>
   </g>
+  <path d="M 201.587 200.417 L 398.236 200.304 C 397.372 189.571 400.171 189.212 395.771 165.91 C 390.13 136.036 379.576 99.761 341.973 60.249 C 322.717 40.016 271.482 0.442 202.834 1.213" style="stroke: black; stroke-width: 1px; fill: rgb(142, 85, 85);"/>
 </svg>

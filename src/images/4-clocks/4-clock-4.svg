@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <title>background</title>
+    <rect fill="#ffffff" id="canvas_background" height="402" width="402" y="-1" x="-1"/>
+    <g display="none" overflow="visible" y="0" x="0" height="100%" width="100%" id="canvasGrid">
+      <rect fill="url(#gridpattern)" stroke-width="0" y="0" x="0" height="100%" width="100%"/>
+    </g>
+  </g>
+  <g>
+    <title>Layer 1</title>
+    <path d="M 399 200 A 199 199 0 0 1 200 399 A 199 199 0 0 1 1 200 A 199 199 0 0 1 200 1 A 199 199 0 0 1 399 200 Z" id="svg_5" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke="#000" fill="#fff"/>
+    <line stroke-linecap="null" id="svg_6" y2="400" x2="200" y1="1.999998" x1="201.99" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke-linejoin="null" stroke="#000" fill="none"/>
+    <line stroke-linecap="null" id="svg_7" y2="200" x2="400" y1="200" x1="0" fill-opacity="null" stroke-opacity="null" stroke-width="1.5" stroke-linejoin="null" stroke="#000" fill="none"/>
+  </g>
+  <path d="M 242.731 47.743 L 439.38 47.856 C 438.516 58.589 440.306 58.948 435.906 82.25 C 430.265 112.124 419.711 146.886 382.108 186.398 C 362.852 206.631 310.608 245.7 241.96 244.929" style="stroke: black; stroke-width: 1px; fill: rgb(142, 85, 85);" transform="matrix(1, 0, 0, 1, -41.14420786156288, 153.47717156713074)"/>
+  <path d="M 4.206 197.372 L 201.864 198.772 C 201 188.039 202.79 187.68 198.39 164.378 C 192.749 134.504 182.195 97.724 144.592 58.212 C 125.336 37.979 72.588 -1.594 3.94 -0.823" style="stroke: black; stroke-width: 1px; fill: rgb(142, 85, 85);" transform="matrix(0, -1, 1, 0, 2.867634, 203.440372)"/>
+  <path d="M 201.2 200.289 L 397.849 200.176 C 396.985 189.443 399.784 189.084 395.384 165.782 C 389.743 135.908 379.189 99.633 341.586 60.121 C 322.33 39.888 271.599 0.818 202.951 1.589" style="stroke: black; stroke-width: 1px; fill: rgb(142, 85, 85);"/>
+  <path d="M 5.505 396.075 L 205.181 395.962 C 204.317 385.229 205.602 384.87 201.202 361.568 C 195.561 331.694 184.503 295.419 146.9 255.907 C 127.644 235.674 74.896 197.614 6.248 198.385" style="stroke: black; stroke-width: 1px; fill: rgb(142, 85, 85);" transform="matrix(-1, 0, 0, -1, 205.879995, 596.970706)"/>
+</svg>
