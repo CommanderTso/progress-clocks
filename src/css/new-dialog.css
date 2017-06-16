@@ -11,13 +11,21 @@
 .modal {
   background-color: #fff;
   border-radius: 5px;
-  max-width: 200px;
+  max-width: 250px;
   min-height: 200px;
   margin: 0px auto;
   padding: 30px;
+  position: relative;
 }
 
 .modal button {
-  width: 50px;
+  width: 90px;
   height: 25px;
+  margin-left: 10px;
+}
+
+.modal .button-row {
+  top: 160px;
+  position: relative;
+  padding: 10px;
 }

@@ -24,9 +24,12 @@ class App extends Component {
           <span className="header-text">Progress Clocks</span>
         </div>
         <div>
-          <NewDialog
-            isOpen={this.state.showNewDialog}
-            onClickCancel={this.toggleNewModal}/>
+          { this.state.showNewDialog
+            ? <NewDialog
+                closeDialog={this.toggleNewModal}
+                onClickCreate={this.createNewClock}/>
+            : false
+          }
           <Button
             label={'New Clock'}
             onClick={this.toggleNewModal}/>
@@ -53,15 +56,18 @@ class App extends Component {
   
   onNewClockClick = () => {
     this.setState({ showNewDialog: true })
-    // let newClocks = this.state.clocks
-    // 
-    // newClocks.push(
-    //   { title: 'A New Clock'
-    //   , totalSteps: 6
-    //   , currentStep: 0
-    //   }
-    // )
-    // this.setState({clocks: newClocks})
+  }
+  
+  createNewClock = (title, totalSteps) => {
+    let newClocks = this.state.clocks
+    
+    newClocks.push(
+      { title: title || 'A New Clock'
+      , totalSteps: totalSteps || 4
+      , currentStep: 0
+      }
+    )
+    this.setState({clocks: newClocks})
   }
 }
 
