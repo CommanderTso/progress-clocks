@@ -1,0 +1,26 @@
+.app {
+  text-align: center;
+}
+
+.app-logo {
+  height: 75px;
+}
+
+.app-header {
+  background-color: #222;
+  height: 75px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: -webkit-xxx-large;
+}
+
+.app-header .header-text {
+  padding-left: 20px;
+}
+
+.app-intro {
+  font-size: large;
+}
