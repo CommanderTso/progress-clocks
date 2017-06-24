@@ -1,28 +1,29 @@
-# This file is a template, and might need editing before it works on your project.
 # Official framework image. Look for the different tagged releases at:
 # https://hub.docker.com/r/library/node/tags/
-image: node:latest
+image: node:8
 
-# Pick zero or more services to be used on all builds.
-# Only needed when using a docker container to run your tests in.
-# Check out: http://docs.gitlab.com/ce/ci/docker/using_docker_images.html#what-is-service
-# services:
-#   - mysql:latest
-#   - redis:latest
-#   - postgres:latest
 
 # This folder is cached between builds
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
-# cache:
-#   paths:
-#   - node_modules/
+cache:
+  paths:
+  - node_modules/
 
-# test_async:
-#   script:
-#    - npm install
-#    - node ./specs/start.js ./specs/async.spec.js
 
-# test_db:
-#   script:
-#    - npm install
-#    - node ./specs/start.js ./specs/db-postgres.spec.js
+build:
+  script:
+    - pwd
+    - ls -l
+    - ls -l src
+    - ls -l src/css
+    - apt-get update
+    - apt-get install apt-transport-https
+    - 'curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -'
+    - 'echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list'
+    - apt-get update
+    - apt-get install -y yarn
+    - yarn
+    - yarn run build
+  artifacts:
+    paths:
+      - build/
