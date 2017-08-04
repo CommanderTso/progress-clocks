@@ -1,0 +1,12 @@
+{
+  "name": "progress-clock-server",
+  "version": "1.0.0",
+  "description": "Express backend for the Progress Clocks app",
+  "main": "index.js",
+  "repository": "https://gitlab.com/commandertso/progress-clocks",
+  "author": "Scott Macmillan",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
