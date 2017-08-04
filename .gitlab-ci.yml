@@ -42,6 +42,7 @@ build:
     - yarn
     - yarn run build
   artifacts:
+    name: progress-clocks-front
     paths:
       - client/build/
 
