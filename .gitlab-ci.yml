@@ -3,7 +3,7 @@
 image: node:8
 
 stages:
-  - test
+  # - test
   - build
   - deploy
 
@@ -25,9 +25,9 @@ before_script:
   - '[[ -f /.dockerenv ]] && echo "$SSH_SERVER_HOSTKEYS" > ~/.ssh/known_hosts'
 
 
-test:
-  stage: test
-  script: echo "You should run some tests here!"
+# test:
+#   stage: test
+#   script: echo "You should run some tests here!"
 
 build:
   stage: build
