@@ -11,7 +11,7 @@ stages:
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
 cache:
   paths:
-  - node_modules/
+  - client/node_modules/
 
 before_script:
   # Install ssh-agent if not already installed, it is required by Docker.
@@ -32,21 +32,18 @@ test:
 build:
   stage: build
   script:
-    - pwd
-    - ls -l
-    - ls -l src
-    - ls -l src/css
     - apt-get update
     - apt-get install apt-transport-https
     - 'curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -'
     - 'echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list'
     - apt-get update
     - apt-get install -y yarn
+    - cd client
     - yarn
     - yarn run build
   artifacts:
     paths:
-      - build/
+      - client/build/
 
 deploy:
   stage: deploy
@@ -57,6 +54,6 @@ deploy:
     name: production
     url: https://progress-clocks.commandertso.com
   script:
-    - scp -P22 -r build/* gitlab@progress-clocks.commandertso.com:/var/www/html/progress-clocks.commandertso.com/public_html
+    - scp -P22 -r client/build/* gitlab@progress-clocks.commandertso.com:/var/www/html/progress-clocks.commandertso.com/public_html
 
       
