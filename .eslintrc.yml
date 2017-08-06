@@ -1,0 +1,19 @@
+env:
+  es6: true
+  node: true
+  mocha: true
+extends: 'eslint:recommended'
+rules:
+  indent:
+    - warn
+    - tab
+    - SwitchCase: 1
+  linebreak-style:
+    - error
+    - unix
+  quotes: 0
+  semi:
+    - warn
+    - never
+  no-unused-vars:
+    - 0
