@@ -29,8 +29,10 @@ before_script:
 #   stage: test
 #   script: echo "You should run some tests here!"
 
-build:
+build_dash:
   stage: build
+  only:
+      - master
   script:
     - apt-get update
     - apt-get install apt-transport-https
@@ -45,6 +47,14 @@ build:
     name: progress-clocks-front
     paths:
       - client/build/
+      
+build_server:
+  stage: build
+  only:
+    - master
+  script:
+    - cd server
+    
 
 deploy:
   stage: deploy

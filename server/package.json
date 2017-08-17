@@ -7,6 +7,10 @@
   "author": "Scott Macmillan",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "helmet": "^3.8.1"
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }
