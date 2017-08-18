@@ -12,13 +12,9 @@
     { "jsx": true
     }
   }
+, "parser": "babel-eslint"
 , "rules": 
-  { "indent": 
-    [ "warn"
-    , "tab"
-    , { "SwitchCase": 1}
-    ]
-  , "linebreak-style":
+  { "linebreak-style":
     [ "error"
     , "unix"
     ]
