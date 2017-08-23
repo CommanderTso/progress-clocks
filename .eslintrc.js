@@ -8,7 +8,6 @@ var config =
     { "sourceType": "module"
     , "ecmaVersion": 6
     }
-  , "parser": "babel-eslint"
   , "rules": 
     { "linebreak-style":
       [ "error"
