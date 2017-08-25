@@ -7,6 +7,4 @@ app.use(helmet())
 
 app.use("/clocks", clocks)
 
-app.listen(3000, function() {
-	console.log("App listening on port 3000")
-})
+module.exports = app

@@ -12,6 +12,6 @@
     "redis": "^2.8.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node startServer.js"
   }
 }
