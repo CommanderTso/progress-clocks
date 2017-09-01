@@ -5,6 +5,6 @@ var clocks = require('./clocks.js')
 var helmet = require('helmet')
 app.use(helmet())
 
-app.use("/clocks", clocks)
+app.use("/clock", clocks)
 
 module.exports = app
