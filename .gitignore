@@ -9,6 +9,9 @@ coverage
 # production
 build
 
+# config
+local.yaml
+
 # misc
 .DS_Store
 .env.local
